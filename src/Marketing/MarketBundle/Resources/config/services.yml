@@ -1,0 +1,12 @@
+services:
+    marketing.symtest.admin.category:
+        class: Marketing\MarketBundle\Admin\CategoryAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: symtest, label: Categories }
+        arguments: [null, Marketing\MarketBundle\Entity\Category, MarketingMarketBundle:CategoryAdmin]
+
+    marketing.symtest.admin.product:
+        class: Marketing\MarketBundle\Admin\ProductAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: symtest, label: Products }
+        arguments: [null, Marketing\MarketBundle\Entity\Product, MarketingMarketBundle:ProductAdmin]

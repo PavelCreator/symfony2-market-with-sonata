@@ -1,0 +1,23 @@
+{% extends 'MarketingMarketBundle::base.html.twig' %}
+{% block title %}{{ product.title }}{% endblock %}
+
+{% block navigation %}
+    <nav>
+        <ul class="navigation">
+            <a href="{{ path('MarketingMarketBundle_homepage') }}"><li>Homepage</li></a> <span>»</span>
+            <a href="{{ path('MarketingMarketBundle_category_show', { 'title': category.title }) }}"><li>{{ category.title }}</li></a> <span>»</span>
+            <li>{{ product.title }}</li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <div class="row product_page">
+        <div class="col-xs-12">
+            <h2>Product: <a href="#" rel='nofollow'>{{ product.title }}</a></h2>
+            <p>
+                {{ product.description }}
+            </p>
+        </div>
+    </div>
+{% endblock %}

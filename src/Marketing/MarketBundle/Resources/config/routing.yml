@@ -1,0 +1,18 @@
+MarketingMarketBundle_homepage:
+    pattern:  /
+    defaults: { _controller: MarketingMarketBundle:Homepage:index }
+    requirements:
+        _method:  GET
+
+MarketingMarketBundle_category_show:
+    pattern:  /{title}
+    defaults: { _controller: MarketingMarketBundle:Category:show }
+    requirements:
+        _method:  GET
+
+MarketingMarketBundle_product_show:
+    pattern:  /{category}/{id}
+    defaults: { _controller: MarketingMarketBundle:Product:show }
+    requirements:
+        _method:  GET
+        id: \d+

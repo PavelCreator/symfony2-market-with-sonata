@@ -1,0 +1,19 @@
+{% extends 'MarketingMarketBundle::base.html.twig' %}
+{% block title %}Categories{% endblock %}
+
+{% block body %}
+    <div class="row">
+    {% for category in categories %}
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 categories-wrapper">
+            <h2>Caregory:
+                <a href="{{ path('MarketingMarketBundle_category_show', { 'title': category.title }) }}">
+                    {{ category.title }}
+                </a></h2>
+            <p>{{ category.description | truncate(350) }}</p>
+            <p>
+                <a class="btn btn-default" role="button" href="{{ path('MarketingMarketBundle_category_show', { 'title': category.title }) }}">View products »</a>
+            </p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
