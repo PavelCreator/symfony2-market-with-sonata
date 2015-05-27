@@ -36,7 +36,8 @@
        	"sonata-project/datagrid-bundle": "dev-master",
 
         "doctrine/doctrine-migrations-bundle": "dev-master",
-        "doctrine/migrations": "dev-master"
+        "doctrine/migrations": "dev-master",
+        "jms/di-extra-bundle": "^1.5"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3",
