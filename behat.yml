@@ -1,0 +1,75 @@
+default:
+    suites:
+        core_features:
+            paths:    [ %paths.base%/features ]
+            contexts: 
+                - FeatureContext:
+                    - http://pavel.jekccs.lan/app_test.php/
+                
+    
+    extensions:
+        Behat\Symfony2Extension: ~
+        Behat\MinkExtension:
+            base_url: http://pavel.jekccs.lan/app_test.php/
+            sessions:
+                default:
+                    symfony2: ~
+                javascript:
+                    selenium2: ~
+            browser_name: firefox
+            show_auto: true
+
+
+
+#default:
+#  suites:
+#    default:
+#        contexts:
+#            - FeatureContext:
+#                - http://skeegleapp.local
+#    extensions:
+#        Behat\Symfony2Extension: ~
+#        Behat\MinkExtension:
+#            base_url: http://skeegleapp.local
+#            goutte:    ~
+#            selenium2: ~            
+#            sessions:
+#                default:
+#                    symfony2: ~
+#                javascript:
+#                    selenium2: ~
+#            browser_name: firefox
+#            show_auto: true
+#basic:
+#    filters:
+#        tags:       "@basic"
+#    formatter:
+#        name:       pretty
+#
+#advanced:
+#    filters:
+#        tags:       "@advanced"
+#    formatter:
+#        name:       progress         
+#
+#jenkins:
+#    filters:
+#        tags:       "@basic"    
+#    formatter:
+#        name: pretty,junit
+#        parameters:
+#            output_path: ,build/logs/behat
+#            
+#jenkins-advanced:
+#    filters:
+#        tags:       "@advanced"    
+#    formatter:
+#        name: pretty,junit
+#        parameters:
+#            output_path: ,build/logs/behat
+#            
+#fastest:  
+#    formatter:
+#        name: pretty,junit
+#        parameters:
+#            output_path: ,build/logs/behat            
